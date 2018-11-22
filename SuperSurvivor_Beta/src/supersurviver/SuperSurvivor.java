@@ -19,16 +19,12 @@ public class SuperSurvivor {
         model = new SuperSurvivorModel();
         view = new SuperSurvivorView();
         controller = new SuperSurvivorController(model, view);
-        
-        
-//        view.centerMe();
-//        SignInPanel signin = new SignInPanel(view);
         MenuPanel mp = new MenuPanel(view);
         view.add(mp);
+        view.centerMe();
 //        view.validate();
         view.pack();
         view.setVisible(true);
-//        signin.setVisible(true);
         System.out.println("Testing to see what happens");
     }
     

@@ -3,6 +3,7 @@ package supersurviver;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -203,11 +204,11 @@ public class CabinPanel extends javax.swing.JPanel {
             optionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(optionsPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(firstOption, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                .addComponent(firstOption, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE)
                 .addGap(63, 63, 63)
-                .addComponent(secondOption, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                .addComponent(secondOption, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
                 .addGap(45, 45, 45)
-                .addComponent(thirdOption, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                .addComponent(thirdOption, javax.swing.GroupLayout.DEFAULT_SIZE, 326, Short.MAX_VALUE)
                 .addGap(29, 29, 29))
         );
         optionsPanelLayout.setVerticalGroup(
@@ -268,7 +269,7 @@ public class CabinPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(topPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 295, Short.MAX_VALUE)
                 .addComponent(storyPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -431,16 +432,29 @@ public class CabinPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_txtStoryMouseClicked
 
-     @Override
+    public void firsBtntOptListener(ActionListener listener){
+        this.firstOption.addActionListener(listener);
+    }
+    
+    public void secondBtnOptListener(ActionListener listener){
+        this.secondOption.addActionListener(listener);
+    }
+    
+    public void thirdBtnOptListener(ActionListener listener){
+        this.thirdOption.addActionListener(listener);
+    } 
+    
+    @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         
         //Put image somewhere else if Window gets big
-        if(jFrame.getWidth() > 500 && jFrame.getHeight() > 500){
-            g.drawImage(img, 10, 70, this);
-        }else{
-            g.drawImage(img, 0, 0, this);
-        }
+//        if(jFrame.getWidth() > 500 && jFrame.getHeight() > 500){
+//            g.drawImage(img, 10, 70, this);
+//        }else{
+//            g.drawImage(img, 0, 0, this);
+//        }
+        g.drawImage(img, 0, 70, this.getWidth(), this.getHeight(), this);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

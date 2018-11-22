@@ -42,7 +42,7 @@ public class WinPanel extends javax.swing.JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(img, 0, 0, this); 
+        g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this); 
     }
 
     /**

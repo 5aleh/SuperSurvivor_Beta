@@ -3,6 +3,7 @@ package supersurviver;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -205,14 +206,14 @@ public class BeginningStoryPanel extends javax.swing.JPanel {
             }
         });
 
-        secondOption.setText("jButton1");
+        secondOption.setText("second");
         secondOption.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 secondOptionActionPerformed(evt);
             }
         });
 
-        thirdOption.setText("jButton1");
+        thirdOption.setText("third");
         thirdOption.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 thirdOptionActionPerformed(evt);
@@ -225,11 +226,11 @@ public class BeginningStoryPanel extends javax.swing.JPanel {
             optionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(optionPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(firstOption, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                .addComponent(firstOption, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
                 .addGap(45, 45, 45)
-                .addComponent(secondOption, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                .addComponent(secondOption, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE)
                 .addGap(46, 46, 46)
-                .addComponent(thirdOption, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
+                .addComponent(thirdOption, javax.swing.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
                 .addContainerGap())
         );
         optionPanelLayout.setVerticalGroup(
@@ -259,7 +260,7 @@ public class BeginningStoryPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(topPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 145, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 337, Short.MAX_VALUE)
                 .addComponent(optionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(storyPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -414,19 +415,32 @@ public class BeginningStoryPanel extends javax.swing.JPanel {
 
     private void formComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentResized
         // TODO add your handling code here:
-        this.setSize(jFrame.getWidth(), jFrame.getHeight());
+//        this.setSize(jFrame.getWidth(), jFrame.getHeight());
     }//GEN-LAST:event_formComponentResized
 
+    public void firsBtntOptListener(ActionListener listener){
+        this.firstOption.addActionListener(listener);
+    }
+    
+    public void secondBtnOptListener(ActionListener listener){
+        this.secondOption.addActionListener(listener);
+    }
+    
+    public void thirdBtnOptListener(ActionListener listener){
+        this.thirdOption.addActionListener(listener);
+    }
+    
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         
         //Put image somewhere else if Window gets big
-        if(jFrame.getWidth() > 500 && jFrame.getHeight() > 500){
-            g.drawImage(img, 10, 70, this);
-        }else{
-            g.drawImage(img, 0, 0, this);
-        }
+//        if(jFrame.getWidth() > 500 && jFrame.getHeight() > 500){
+            g.drawImage(img, 0, 70, this.getWidth(), this.getHeight(), this);
+//            g.drawImage(img, this.getWidth()/2, this.getHeight()/2, this);
+//        }else{
+//            g.drawImage(img, 0, 0, this);
+//        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

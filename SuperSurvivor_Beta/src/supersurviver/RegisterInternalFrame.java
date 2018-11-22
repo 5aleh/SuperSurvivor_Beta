@@ -55,9 +55,8 @@ public class RegisterInternalFrame extends javax.swing.JInternalFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.ipadx = 239;
-        gridBagConstraints.ipady = 22;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(22, 168, 0, 165);
+        gridBagConstraints.insets = new java.awt.Insets(0, 66, 0, 63);
         getContentPane().add(signinLabel, gridBagConstraints);
 
         nameTextField.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
@@ -68,7 +67,7 @@ public class RegisterInternalFrame extends javax.swing.JInternalFrame {
         gridBagConstraints.ipadx = 423;
         gridBagConstraints.ipady = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(7, 168, 0, 165);
+        gridBagConstraints.insets = new java.awt.Insets(7, 66, 0, 63);
         getContentPane().add(nameTextField, gridBagConstraints);
 
         nameLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -77,7 +76,7 @@ public class RegisterInternalFrame extends javax.swing.JInternalFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(56, 168, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(43, 66, 0, 0);
         getContentPane().add(nameLabel, gridBagConstraints);
 
         passwordLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -87,7 +86,7 @@ public class RegisterInternalFrame extends javax.swing.JInternalFrame {
         gridBagConstraints.gridy = 3;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 168, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(18, 66, 0, 0);
         getContentPane().add(passwordLabel, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -96,7 +95,7 @@ public class RegisterInternalFrame extends javax.swing.JInternalFrame {
         gridBagConstraints.ipadx = 423;
         gridBagConstraints.ipady = 28;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(7, 168, 0, 165);
+        gridBagConstraints.insets = new java.awt.Insets(7, 66, 0, 63);
         getContentPane().add(jPasswordField1, gridBagConstraints);
 
         submitButton.setText("Submit");
@@ -106,7 +105,7 @@ public class RegisterInternalFrame extends javax.swing.JInternalFrame {
         gridBagConstraints.ipadx = 50;
         gridBagConstraints.ipady = 12;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 70, 97, 0);
+        gridBagConstraints.insets = new java.awt.Insets(18, 70, 40, 0);
         getContentPane().add(submitButton, gridBagConstraints);
 
         pack();

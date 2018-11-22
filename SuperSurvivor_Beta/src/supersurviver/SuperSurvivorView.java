@@ -6,15 +6,18 @@ import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Frame;
 import java.awt.Toolkit;
 
 public class SuperSurvivorView extends javax.swing.JFrame {
 
-    MenuPanel myMenu;
-    SignInPanel signin;
+//    MenuPanel myMenu;
+//    SignInPanel signin;
     
     public SuperSurvivorView() {
+        this.setPreferredSize(new Dimension(1000, 700));
         initComponents();
+//        this.setState(Frame.NORMAL);
 //        myMenu = new MenuPanel(this);
 //        this.add(myMenu);
         
