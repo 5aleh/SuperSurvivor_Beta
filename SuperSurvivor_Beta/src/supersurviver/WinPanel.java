@@ -9,6 +9,8 @@ package supersurviver;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -85,6 +87,9 @@ public class WinPanel extends javax.swing.JPanel {
             menuPan.setVisible(true);
     }//GEN-LAST:event_formMouseReleased
 
+    public void addWinListener(ActionListener listener){
+        this.addMouseListener((MouseListener) listener);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables

@@ -4,6 +4,7 @@ package supersurviver;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -442,7 +443,11 @@ public class CabinPanel extends javax.swing.JPanel {
     
     public void thirdBtnOptListener(ActionListener listener){
         this.thirdOption.addActionListener(listener);
-    } 
+    }
+    
+    public void txtStoryListener(ActionListener listener){
+        this.txtStory.addMouseListener((MouseListener) listener);
+    }
     
     @Override
     protected void paintComponent(Graphics g) {

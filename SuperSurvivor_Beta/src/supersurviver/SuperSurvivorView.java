@@ -11,8 +11,12 @@ import java.awt.Toolkit;
 
 public class SuperSurvivorView extends javax.swing.JFrame {
 
-//    MenuPanel myMenu;
-//    SignInPanel signin;
+    SignInPanel signin;
+    RegisterInternalFrame registerframe;
+    MenuPanel menupanel;
+    BeginningStoryPanel beginningpanel;
+    CabinPanel cabinpanel;
+    WinPanel winpanel;
     
     public SuperSurvivorView() {
         this.setPreferredSize(new Dimension(1000, 700));
