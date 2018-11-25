@@ -83,31 +83,39 @@ public class SuperSurvivorController {
     }
     
     //This is where the functions in RegisterInternalFrame are implemented.
-    public void registerStuff() {
-        //This is what happends when you click the submit button
-        //Its supposed to create a new user in the database with default values, sign the user in by going to the menu page
-        actionListener = new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                
-            }
-        };
-        view.registerframe.addsubmitListener(actionListener);
-    }
-    
-    //This is where the functions in MenuPanel are implemented.
-    public void menuStuff() {
-        //This is what happends when you click the play or exit button
-        //Its supposed to go on to the beginningstorypanel when you click play and go to signinpanel page when you click exit
-        actionListener = new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                
-            }
-        };
+  public void registerStuff(User u, DatabaseBean d, SignInPanel s) throws SQLException {
         
-        view.menupanel.addPlayListener(actionListener);
-        view.menupanel.addExitListener(actionListener);
-    }
+       u.WriteUser(u);
+      
     
+        s.addsubmitListener(new ActionListener() {       
+            
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+
+                System.out.println(u.getId()+ u.getPassword());
+                d.Writeuser(u.getId(), u.getPass());
+               
+                
+               
+            }
+        });
+        
+        s.addregisterListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+                
+               RegisterInternalFrame register = new RegisterInternalFrame();
+		//register.RegisterInternalFrame();
+            }
+            
+        });
+        
+        
+        
+        view.signin.addsubmitListener(actionListener);
+        view.signin.addregisterListener(actionListener);
+    }
     //This is where the functions in BeginningStoryPanel are implemented.
     public void beginningStoryStuff() {
         //This is what happends when you click any of the options in the beginningstorypanel
