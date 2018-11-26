@@ -1,3 +1,5 @@
+package supersurviver;
+
 public class Death {
     private int uid;
     private int sid;

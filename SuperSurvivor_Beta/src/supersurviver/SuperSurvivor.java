@@ -11,21 +11,22 @@ package supersurviver;
  */
 public class SuperSurvivor {
     
-    public static SuperSurvivorModel model;
+    public static DatabaseBean model;
     public static SuperSurvivorView view;
     public static SuperSurvivorController controller;
             
     public static void main(String[] args) {
-        model = new SuperSurvivorModel();
+        model = new DatabaseBean();
         view = new SuperSurvivorView();
         controller = new SuperSurvivorController(model, view);
-        MenuPanel mp = new MenuPanel(view);
-        view.add(mp);
-        view.centerMe();
-//        view.validate();
-        view.pack();
-        view.setVisible(true);
-        System.out.println("Testing to see what happens");
+//        MenuPanel mp = new MenuPanel(view);
+//        SignInPanel sp = new SignInPanel(view);
+//        view.add(sp);
+//        view.centerMe();
+////        view.validate();
+//        view.pack();
+//        view.setVisible(true);
+//        System.out.println("Testing to see what happens");
     }
     
 }

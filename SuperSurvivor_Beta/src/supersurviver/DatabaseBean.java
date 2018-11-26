@@ -1,10 +1,13 @@
+package supersurviver;
+
 import java.awt.*;
 import java.io.Serializable;
 import java.sql.*;
 
 public class DatabaseBean<pubic> implements Serializable {
 
-    private static String url = "jdbc:sqlite:../SuperSurvivor_Beta/SuperSurvivor_Beta/SuperSurvivorDB.db";
+    private static String url = "jdbc:sqlite:SuperSurvivorDB.db";
+//    private static String url = "jdbc:sqlite:C:\\Users\\Nkwabo Saleh\\Documents\\Windowing class\\SuperSurvivor_Beta\\SuperSurvivor_Beta\\SuperSurvivorDB.db";
 
     public DatabaseBean(){
 

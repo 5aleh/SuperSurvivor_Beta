@@ -1,3 +1,5 @@
+package supersurviver;
+
 public class User {
 
     private int id;

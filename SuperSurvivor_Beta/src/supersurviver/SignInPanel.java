@@ -33,8 +33,16 @@ public class SignInPanel extends javax.swing.JPanel {
         this.submitButton.addActionListener(listener);
     }
     
-    public void addregisterListener(ActionListener listener){
-        this.registerLabel.addMouseListener((MouseListener) listener);
+    public void addregisterListener(MouseListener listener){
+        this.registerLabel.addMouseListener(listener);
+    }
+    
+    public String getUserName() {
+        return this.nameTextField.getText();
+    }
+    
+    public char[] getUserPassword() {
+        return this.jPasswordField1.getPassword();
     }
 
     /**

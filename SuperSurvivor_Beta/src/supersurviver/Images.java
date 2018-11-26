@@ -1,3 +1,5 @@
+package supersurviver;
+
 public class Images {
 
     private int iid;

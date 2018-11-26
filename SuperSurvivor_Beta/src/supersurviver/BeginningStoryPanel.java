@@ -435,6 +435,20 @@ public class BeginningStoryPanel extends javax.swing.JPanel {
         this.txtStory.addMouseListener((MouseListener) listener);
     }
     
+    public void setStoryText(String d){
+        this.txtStory.setText(d);
+    }
+    
+    public void setOptions(String first, String second, String third){
+        this.firstOption.setText(first);
+        this.secondOption.setText(second);
+        this.thirdOption.setText(third);
+    }
+    
+    public void setChosenOption(String d){
+        this.txtStory.setText(d);
+    }
+    
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

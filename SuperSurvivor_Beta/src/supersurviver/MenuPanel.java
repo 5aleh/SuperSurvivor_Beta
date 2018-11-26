@@ -144,6 +144,10 @@ public class MenuPanel extends javax.swing.JPanel {
         this.btnExit.addActionListener(listener);
     }
     
+    public void setUserLabel(String userName) {
+        this.jLabel1.setText("Welcome " + userName + "!");
+    }
+    
     class SuperPanel extends JPanel{
         
         //Draws the Title of the Game 'SuperSurvivor'   

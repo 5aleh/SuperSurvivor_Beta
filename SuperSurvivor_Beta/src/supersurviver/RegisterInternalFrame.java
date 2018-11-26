@@ -25,6 +25,14 @@ public class RegisterInternalFrame extends javax.swing.JInternalFrame {
      public void addsubmitListener(ActionListener listener){
         this.submitButton.addActionListener(listener);
     }
+     
+     public String getUserName() {
+        return this.nameTextField.getText();
+    }
+    
+    public char[] getUserPassword() {
+        return this.jPasswordField1.getPassword();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

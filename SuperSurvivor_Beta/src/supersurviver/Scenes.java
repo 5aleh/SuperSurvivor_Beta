@@ -1,3 +1,5 @@
+package supersurviver;
+
 public class Scenes {
 
     private int sid;
